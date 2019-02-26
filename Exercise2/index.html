@@ -5,8 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Javascript code 2</title>
+
+    <script>    
+        var personList = [
+            {id:1 , name:"Omer", age: 17},
+            {id:2 , name:"Ahmet", age: 50},
+            {id:3 , name:"Zafer", age: 27},
+            {id:4 , name:"Ugur", age: 23},
+        ];
+
+        function listele()
+        {
+            //id si listArea olan div i sectik
+            var listArea = document.getElementById("listArea");
+            
+            for(var i=0; i<personList.length; i++){
+                var newEl = document.createElement("div");
+                newEl.id = personList[i].id;
+                if(personList[i].age<20){
+                    newEl.innerHTML = personList[i].name +"<b> Cok Genc </b>"; 
+                }
+                else if(personList[i].age<25){
+                    newEl.innerHTML = personList[i].name +"<b> Genc </b>";
+                }
+                else if(personList[i].age<30){
+                    newEl.innerHTML = personList[i].name +"<b> Orta Yas </b>";
+                }
+                else {
+                    newEl.innerHTML = personList[i].name +"<b> Yetiskin </b>";
+                }
+                listArea.appendChild(newEl);
+            }
+            //console.log(listArea);
+        }
+
+        var car = {
+            model : "corolla",
+            brand : "toyota",
+            modelYear : 2006
+        }
+        car.speed = 105;
+
+    </script>
+
 </head>
 <body>
+    <h1>Javascript 2</h1>
+
+    <button onclick="listele()">List</button>
     
+    <div id="listArea"></div>
 </body>
 </html>
