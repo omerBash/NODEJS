@@ -1,4 +1,1 @@
-# NODEJS
-Degisiklik
-
-VS Code Degisiklik
+# NodeJS
