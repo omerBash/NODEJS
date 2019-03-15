@@ -39,6 +39,22 @@
             //console.log(listArea);
         }
 
+        function getFibonacci(fiboNum){
+            var result = 0;
+            if(fiboNum == 0){
+                result = 0;
+            }
+            else if (fiboNum == 1) {
+                result = 1;
+            }
+            else {
+                var prev1 = getFibonacci(fiboNum-2);
+                var prev2 = getFibonacci(fiboNum-1);
+                result = prev1 + prev2;
+            }
+            return result;
+        }
+
         var car = {
             model : "corolla",
             brand : "toyota",
@@ -53,7 +69,7 @@
     <h1>Javascript 2</h1>
 
     <button onclick="listele()">List</button>
-    
     <div id="listArea"></div>
+    <button onclick="getFibonacci(5)">Fibonacci</button>
 </body>
 </html>
